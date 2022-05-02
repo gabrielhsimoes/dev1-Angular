@@ -1,14 +1,5 @@
-<div class="text-center mt-3 mb-3">
-  <form>
-      <input
-          class="rounded"
-          type="search"
-          placeholder="search..."
-          autofocus
-          (keyup)="filter = $event.target.value">
-  </form>
-</div>
+<!-- <h1 style="background: red;" appDarkenOnHover brightness="20%">Photos</h1> -->
 
-<app-photos [photos]="photos | filterByDescription: filter">
-</app-photos>
-
+<app-search (onTyping)="filter = $event" [value]="filter"></app-search>
+<app-photos [photos]="photos | filterByDescription: filter"></app-photos>
+<app-load-button (click)="load()" [hasMore]="hasMore"></app-load-button>
