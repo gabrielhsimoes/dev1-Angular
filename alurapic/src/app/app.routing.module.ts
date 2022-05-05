@@ -5,12 +5,18 @@ import { RouterModule, Routes } from "@angular/router";
 import { PhotoListComponent } from './photos/photo-list/photo-list.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { SigninComponent } from './home/signin/signin.component';
-import { AuthGuard } from './core/auth/auth.guard';
 
 const routes: Routes = [
-  { path: '', component: SigninComponent,
-    canActivate: [AuthGuard]
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'home'
   },
+  {
+    path: 'home',
+    loadChildren: './home/home.module#HomeModule'
+  },
+
   { path: 'login', component: SigninComponent },
   {
     path: 'user/:userName', component: PhotoListComponent,
@@ -23,12 +29,12 @@ const routes: Routes = [
 ]
 
 @NgModule({
-imports: [
-  RouterModule.forRoot(routes)
-],
-exports: [
-  RouterModule
-]
+  imports: [
+    RouterModule.forRoot(routes, { useHash: true })
+  ],
+  exports: [
+    RouterModule
+  ]
 })
 export class AppRoutingModule {
 
