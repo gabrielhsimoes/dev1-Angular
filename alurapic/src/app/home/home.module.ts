@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { SingupComponent } from './singup/singup.component';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home.routing.module';
+import { SignUpService } from './singup/signup.service';
 
 @NgModule({
   imports: [
@@ -24,6 +25,8 @@ import { HomeRoutingModule } from './home.routing.module';
     SingupComponent,
     HomeComponent
   ],
-  providers: [],
+  providers: [
+    SignUpService
+  ],
 })
 export class HomeModule { }
