@@ -8,3 +8,9 @@
   
 # API - Alurapic
   Para consumo de API o node 8
+  
+  Para rodar a API execute o npm start (node 8)
+  
+  #Alterar versao do note
+  
+  nvm list e nvm use
