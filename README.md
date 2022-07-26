@@ -11,6 +11,7 @@
   
   Para rodar a API execute o npm start (node 8)
   
-  #Alterar versao do note
+# Alterar versao do note
   
-  nvm list e nvm use
+  `nvm list` para lista todas as versões do note
+  `nvm use` utilize para alternar entre versões
