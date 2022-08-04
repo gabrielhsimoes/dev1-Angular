@@ -5,7 +5,9 @@ import { DarkenOnHoverDirective } from './darken-on-hover.directive';
 @NgModule({
   imports: [],
   exports: [DarkenOnHoverDirective],
-  declarations: [DarkenOnHoverDirective],
+  declarations: [	DarkenOnHoverDirective,
+
+   ],
   providers: [],
 })
 export class DarkenOnHoverModule { }
